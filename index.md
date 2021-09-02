@@ -1,4 +1,4 @@
-# repository
+# Succ
 
 ## title of project
 
