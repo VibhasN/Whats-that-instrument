@@ -1,6 +1,6 @@
 # Succ
 
-## title of project
+## Identifying Instruments
 
 Purpose of project, general information.
 
