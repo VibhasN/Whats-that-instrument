@@ -4,7 +4,7 @@
 
 Purpose of project, general information.
 
-![example of cello audio](/008__[cel][nod][cla]0058__1.wav)
+[example of cello audio](/008__[cel][nod][cla]0058__1.wav)
 
 Additional info.
 
