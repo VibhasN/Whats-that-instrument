@@ -20,7 +20,9 @@ For each of these clips, we
 - generated a spectrogram, which looks at the frequencies of each audio file, giving a better understanding of what the “shape” of the audio was, and
 - applied a log transform to the spectrogram, spreading out the frequencies differently, which could make the patterns in lower frequencies easier to detect.
 For the example audio, here are the aforementioned visualizations of the audio:
+
 ![Example of data preprocessing](/Screen Shot 2021-09-07 at 6.40.08 PM.png)
+
 In this way, a dataset of audio files was converted into a dataset of images.
 
 
