@@ -1,4 +1,4 @@
-![Graph](https://user-images.githubusercontent.com/89939151/132444419-06370ff0-d23a-4062-8c07-9506b12692cf.PNG)
+
 ## What’s that instrument?
 ### Identifying Instruments
 
@@ -42,6 +42,8 @@ See definition about thing
 ![Original-ResNet-18](https://user-images.githubusercontent.com/89939151/132442868-598ad361-77bf-4ef8-b68c-192c2fab460f.png)
 
 Afterwards, we used a ResNet18 Model which has 18 layers compared to the 6 layers of the baseline model. Normally, in a convolutional Neural Network, each successive layer adds more in-depth analysis, with each one examining a certain aspect of the image (shapes, edges, etc..) Therefore, it makes sense that a CNN with more layers would be more accurate. However, this is not what we found. The most accurate models only had between 16-30 layers. Although the exact reason for this cause is unknown, one theory is due to the idea of Vanishing Gradient. A neural network uses gradients to adjust its weight to reduce loss and maximize accuracy. However, sometimes in the beginning layers, the gradient is astronomically tiny (hence the name “vanishing gradient”), which means that our weights would not be adjusted properly throughout the network. If this is the case, adding more layers wouldn’t be helpful. 
+
+![Graph](https://user-images.githubusercontent.com/89939151/132444419-06370ff0-d23a-4062-8c07-9506b12692cf.PNG)
 
 With diagram, no discussion
 
