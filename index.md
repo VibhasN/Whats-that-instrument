@@ -63,18 +63,18 @@ If we were to continue this project, we could expand from the IRMAS dataset to i
 Also, our method of preprocessing could be changed. For example, the log transform served to emphasize patterns in lower frequencies, but this might not be necessary for a model to pick up on the patterns.
 
 ### Acknowledgements
-IRMAS dataset
+- IRMAS dataset
 Juan J. Bosch, Ferdinand Fuhrmann, & Perfecto Herrera. (2014). IRMAS: a dataset for instrument recognition in musical audio signals (1.0) [Data set]. 13th International Society for Music Information Retrieval Conference (ISMIR 2012), Porto, Portugal. Zenodo. https://doi.org/10.5281/zenodo.1290750
-ResNet18 Diagram
+- ResNet18 Diagram
 https://www.researchgate.net/figure/Original-ResNet-18-Architecture_fig1_336642248
-Other Convolutional Neural Network Diagrams
+- Other Convolutional Neural Network Diagrams
 https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53
-How to Create Basic Convolutional Neural Network
+- How to Create Basic Convolutional Neural Network
 https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-photos-of-dogs-and-cats/
-Stack Overflow and Google Colaboratory
-PyTorch, Keras 
-Librosa
-McFee, Brian, Colin Raffel, Dawen Liang, Daniel PW Ellis, Matt McVicar, Eric Battenberg, and Oriol Nieto. “librosa: Audio and music signal analysis in python.” In Proceedings of the 14th python in science conference, pp. 18-25. 2015.
-Numpy, Sci-kit Learn, Matplotlib
-Professor Donald Smith
+- Stack Overflow and Google Colaboratory
+- PyTorch, Keras 
+- Librosa
+- McFee, Brian, Colin Raffel, Dawen Liang, Daniel PW Ellis, Matt McVicar, Eric Battenberg, and Oriol Nieto. “librosa: Audio and music signal analysis in python.” In Proceedings of the 14th python in science conference, pp. 18-25. 2015.
+- Numpy, Sci-kit Learn, Matplotlib
+- Professor Donald Smith
 
