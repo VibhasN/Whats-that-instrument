@@ -34,7 +34,13 @@ A convolutional neural network or CNN is a deep learning algorithm that takes an
 
 ### How does a CNN work?
 
-See definition about thing
+(Add GIF here)
+
+In general, there are two important types of layers in a CNN: a convolution and pooling layer. A computer treats an image as a matrix of pixel values. This matrix then goes through the first layer which is convolution. In this layer, a process of matrix multiplication happens where the input matrix is multiplied by a filter that goes through the entire image. This filter outputs a convolved feature which is essentially the result of the model extracting the high-level information from the image (e.g. if the image was a dog, convolution could extract an eye). This convolved feature then goes through an additional processing layer called max pooling.
+
+(Add Max Pooling Image Here)
+
+Max pooling outputs the maximum value of a portion of the image covered by the filter. This process is similar to convolution where it reduces the necessary computational power but this also acts as a noise suppressant where by taking the maximum value, it discards all of the information that isn’t as important. These two processes repeat a number of times depending on the size of the model (we will talk about the importance of size later) but the matrix value it outputs eventually feeds into a bread-and-butter multilayer perceptron. The end matrix value is flattened and fed into this and through a process of softmax classification, the input image is classified. In the case of our project, each spectrogram would go through this process to eventually be classified as one of the eleven instruments. 
 
 ### Results
 #### Baseline 6 layer Model
