@@ -32,7 +32,7 @@ In this way, a dataset of audio files was converted into a dataset of images.
 
 A convolutional neural network or CNN is a deep learning algorithm that takes an input image, assigns importance to certain objects in the input image through weights and biases, and then differentiates an input image from other inputs. In this particular project, CNNs are preferable to RNNs compared to other model types because they are able to deal with spatial data more efficiently. In our case, we started with audio files which are not inputtable into a CNN so we had to go through an initial data preprocessing step that turned the audio files into inputtable images. The CNN here will essentially reduce the parameters involved and apply relevant filters (which can be seen as key features of an image) to the image in order to reduce the amount of processing necessary to classify it and to increase efficiency. 
 
-### Even more neural network definition things
+### How does a CNN work?
 
 See definition about thing
 
