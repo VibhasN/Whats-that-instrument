@@ -1,7 +1,7 @@
 ## What’s that instrument?
 ### Identifying Instruments
 
-Consider the following audio clip: [Guess the instrument!] (/008__[cel][nod][cla]0058__1.wav)
+Consider the following audio clip: [Guess the instrument!](/008__[cel][nod][cla]0058__1.wav)
 What musical instrument are you listening to? 
 To those of you who recognized the instrument, awesome! But to those of you who thought to yourself, “ah, that’s a violin,” this deeply offends the groupmate who is a cellist; he’ll have you know that that was an audio clip of the cello. Not a “big violin;” a cello.
 Don’t you wish you had some sort of tool to distinguish between the different sounds of different instruments? Because to those of you who responded incorrectly, the cellist hopes you have a tool; this project is one such tool.
