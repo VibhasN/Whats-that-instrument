@@ -1,5 +1,7 @@
 # What’s that instrument?
-By Eric Wang, Bobby Bhandari, and Vibhas Nair
+
+By: Eric Wang, Bobby Bhandari, and Vibhas Nair
+
 ## Identifying Instruments
 
 Consider the following audio clip: [Guess the instrument!](/008__[cel][nod][cla]0058__1.wav)
@@ -14,6 +16,7 @@ Don’t you wish you had some sort of tool to distinguish between the different 
 3. Create visualizations of the models’ performances.
 
 ## Dataset and Data Preprocessing
+
 The dataset used in this project was [IRMAS](https://zenodo.org/record/1290750#.YTfo455KhTa). The dataset contains 6,705 2-second audio clips of 11 instruments: cello, clarinet, flute, acoustic guitar, electric guitar, organ, piano, saxophone, trumpet, violin, and voice. 
 The audio clips are of these instruments playing some short segment of music; all these clips have the instruments playing different sections in music with different pitches and volumes.
 For each of these clips, we
@@ -44,6 +47,7 @@ In general, there are two important types of layers in a CNN: a convolution and 
 Max pooling outputs the maximum value of a portion of the image covered by the filter. This process is similar to convolution where it reduces the necessary computational power but this also acts as a noise suppressant where by taking the maximum value, it discards all of the information that isn’t as important. These two processes repeat a number of times depending on the size of the model (we will talk about the importance of size later) but the matrix value it outputs eventually feeds into a bread-and-butter multilayer perceptron. The end matrix value is flattened and fed into this and through a process of softmax classification, the input image is classified. In the case of our project, each spectrogram would go through this process to eventually be classified as one of the eleven instruments. 
 
 ## Results
+
 ### Baseline 6 layer Model
 
 We started with a smaller baseline model that only had six layers. In other words, this model had three sets of convolution and max pooling. Since this model was quite small the results did not end up completely ideal. 
@@ -69,6 +73,7 @@ Violin Spectrogram
 As seen in the confusion matrix, interestingly the model often confused the trumpet spectrograms as violin spectrograms, but not the other way around. The two spectrograms are shown above where there is a pattern of a large red bar on the bottom left of both of the images that began to thin out near the top. Perhaps this is why the model confused the trumpet for the violin. However, there is more space between the thin stripes in the violin spectrogram which may have allowed the model to differentiate the violin from the trumpet. 
 
 ### ResNet18 Model
+
 ![Original-ResNet-18](https://user-images.githubusercontent.com/89939151/132442868-598ad361-77bf-4ef8-b68c-192c2fab460f.png)
 
 Afterward, we used a ResNet18 Model which has 18 layers compared to the 6 layers of the baseline model. Normally, in a convolutional neural network, each successive layer adds more in-depth analysis, with each one examining a certain aspect of the image (shapes, edges, etc.) Therefore, it makes sense that a CNN with more layers would be more accurate. However, this is not what we found. The most accurate models only had between 16-30 layers. Although the exact reason for this cause is unknown, one theory is due to the idea of the vanishing gradient problem. A neural network uses gradients to adjust its weight to reduce loss and maximize accuracy. However, sometimes in the beginning layers, the gradient is astronomically tiny (hence the name “vanishing gradient”), which means that our weights would not be adjusted properly throughout the network. If this is the case, adding more layers wouldn’t be helpful. 
@@ -97,10 +102,20 @@ As shown above, the spectrograms do indeed have some major similarities. They bo
 The model suggests that converting audio clips to visual spectrograms is an effective method to differentiate between sounds. This piece of information can have much more appropriate and useful applications in real life. For example, this tool can be used to identify and target different species of animals from their mating calls, which would be quite valuable in the environmental field. It could also be used to identify voices from an audio recording. Although unlikely, in the distant future, governments could potentially have a stored database of the voices of their citizens, similar to fingerprints, and use it to prosecute criminals using a similar, more advanced model.
 
 ## Future Work
+
 If we were to continue this project, we could expand from the IRMAS dataset to include other instruments and more audio files. For example, never mind auditorially, many fail to visually distinguish a euphonium from a tuba. There are many more than 11 instruments in a symphony orchestra that could be included.
 Also, our method of preprocessing could be changed. For example, the log transform served to emphasize patterns in lower frequencies, but this might not be necessary for a model to pick up on the patterns.
 
+## Conclusion
+
+Our method was as follows:
+1. We used the IRMAS dataset for audio clips of 11 instruments.
+2. Each of the audio clips was converted into spectrograms with a log transform applied to get a visual representation of our audio clips.
+3. A 6 layer convolutional neural network and ResNet18 model were trained.
+4. Visualizations of the performance of the models were created; the approach appears to work decently well in discerning musical instruments.
+
 ## Acknowledgements
+
 - IRMAS dataset
   - Juan J. Bosch, Ferdinand Fuhrmann, & Perfecto Herrera. (2014). IRMAS: a dataset for instrument recognition in musical audio signals (1.0) [Data set]. 13th International Society for Music Information Retrieval Conference (ISMIR 2012), Porto, Portugal. Zenodo. https://doi.org/10.5281/zenodo.1290750
 - ResNet18 Diagram
