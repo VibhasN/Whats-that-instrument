@@ -52,6 +52,8 @@ Describe
 
 (cello, clarinet, flute, acoustic guitar, electric guitar, organ, piano, saxophone, trumpet, violin, and voice in order of abbreviations)
 
+This is a confusion matrix of the baseline model that allows us to visualize which instruments the model had the most and least difficulty predicting. The Y-axis are the actual instruments and the X-axis are the model’s predictions. So a perfect model with 100% accuracy would have all the numbers lined up in a diagonal where the actual and predicted instruments meet, with every other box containing a 0. We can determine that the model did a poor job of predicting the instruments as there are a lot of large numbers that are outside of the diagonal; this is supported by its low accuracy of 40%. The instrument with the highest accuracy was the organ with 62.83%, while the lowest was the flute with 13.01%, with the violin coming in at a close second with 15.57%. It’s interesting that the model was able to differentiate the violin from a trumpet 100% of the time, but it wasn’t able to do the same with the trumpet; the model predicted the trumpet to be the violin 17 times. This could indicate that the spectrograms of the two instruments are somehow closely related
+
 Trumpet Spectrogram
 
 ![tru116](https://user-images.githubusercontent.com/89653898/132536117-68f6e373-7115-41ca-90f9-3af6c1fc7cdc.PNG)
@@ -77,6 +79,9 @@ Violin Spectrogram
 ![Similar violin spectrogram](/vio108.png)
 Voice Spectrogram
 ![Similar voice spectrogram](/voi103.png)
+
+As seen in the confusion matrix, interestingly the model often confused the trumpet spectrograms as violin spectrograms, but not the other way around. The two spectrograms are shown above where there is a pattern of a large red bar on the bottom left of both of the images that began to thin out near the top. Perhaps this is why the model confused the trumpet for the violin. However, there is more space between the thin stripes in the violin spectrogram which may have allowed the model to differentiate the violin from the trumpet. 
+
 
 As shown above, the spectrograms do indeed have some major similarities. They both start out with thick blocks at the bottom that gradually become thin stripes near the top. Although the violin has shorter stripes than the voice, the placement and shape are similar enough to where the model might have been confused.
 
