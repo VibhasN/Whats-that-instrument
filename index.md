@@ -44,15 +44,18 @@ Max pooling outputs the maximum value of a portion of the image covered by the f
 
 ### Results
 #### Baseline 6 layer Model
-(Add graph here)
 
-Describe
+We started with a smaller baseline model that only had six layers. In other words, this model had three sets of convolution and max pooling. Since this model was quite small the results did not end up completely ideal. 
+
+![Image of accuracy and loss plots](/IRMAS_3block_model_plot.png)
+
+We trained our baseline model for around eighteen epochs, or iterations of the training dataset and calculated the loss and accuracy for the training and validation sets in the graphs above. The training graph behaved normally where the loss decreased and the accuracy increased with the number of epochs. With the validation set, however, this started overfitting around the sixth epoch. At first, the validation loss and accuracy were similar to the training loss and accuracy, but at the sixth epoch, the model started to become too accustomed to the training data. This is overfitting—where the model begins to learn the training data too well and instead of identifying spatial patterns in the spectrograms, the model begins to just identify the training data. When trying to classify the validation data, the model is confused. In terms of validation loss, the model started to hover around 2.0 at the point of overfitting which is a considerably high value. The model’s overall accuracy peaked just below 40% at the point of overfitting. This model was definitely better than baseline guessing (which is around 9% accuracy for 11 instruments) however, it's not much better than that. An accuracy of 40% shows that this type of CNN is worth creating as it is comparatively better than baseline guessing, but in comparison to other models, it doesn’t work effectively. 
 
 ![Confusion Matrix 1](https://user-images.githubusercontent.com/89939151/132530832-3a73b26c-c709-4d11-9023-24958b1bddac.PNG)
 
 (cello, clarinet, flute, acoustic guitar, electric guitar, organ, piano, saxophone, trumpet, violin, and voice in order of abbreviations)
 
-This is a confusion matrix of the baseline model that allows us to visualize which instruments the model had the most and least difficulty predicting. The Y-axis are the actual instruments and the X-axis are the model’s predictions. So a perfect model with 100% accuracy would have all the numbers lined up in a diagonal where the actual and predicted instruments meet, with every other box containing a 0. We can determine that the model did a poor job of predicting the instruments as there are a lot of large numbers that are outside of the diagonal; this is supported by its low accuracy of 40%. The instrument with the highest accuracy was the organ with 62.83%, while the lowest was the flute with 13.01%, with the violin coming in at a close second with 15.57%. It’s interesting that the model was able to differentiate the violin from a trumpet 100% of the time, but it wasn’t able to do the same with the trumpet; the model predicted the trumpet to be the violin 17 times. This could indicate that the spectrograms of the two instruments are somehow closely related
+This is a confusion matrix of the baseline model that allows us to visualize which instruments the model had the most and least difficulty predicting. The Y-axis are the actual instruments and the X-axis are the model’s predictions. So a perfect model with 100% accuracy would have all the numbers lined up in a diagonal where the actual and predicted instruments meet, with every other box containing a 0. We can determine that the model did a poor job of predicting the instruments as there are a lot of large numbers that are outside of the diagonal; this is supported by its low accuracy of 40%. The instrument with the highest accuracy was the organ with 62.83%, while the lowest was the flute with 13.01%, with the violin coming in at a close second with 15.57%. It’s interesting that the model was able to differentiate the violin from a trumpet 100% of the time, but it wasn’t able to do the same with the trumpet; the model predicted the trumpet to be the violin 17 times. This could indicate that the spectrograms of the two instruments are somehow closely related.
 
 Trumpet Spectrogram
 
