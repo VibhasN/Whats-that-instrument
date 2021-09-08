@@ -26,9 +26,11 @@ For the example audio, here are the aforementioned visualizations of the audio:
 In this way, a dataset of audio files was converted into a dataset of images.
 
 
-### Neural network definition things
+### What is a Convolutional Neural Network?
 
-See definition about thing
+[CNN](https://user-images.githubusercontent.com/89939151/132453944-5736b8ae-87c9-454f-8ea7-8dbb5367c7fd.PNG)
+
+A convolutional neural network or CNN is a deep learning algorithm that takes an input image, assigns importance to certain objects in the input image through weights and biases, and then differentiates an input image from other inputs. In this particular project, CNNs are preferable to RNNs compared to other model types because they are able to deal with spatial data more efficiently. In our case, we started with audio files which are not inputtable into a CNN so we had to go through an initial data preprocessing step that turned the audio files into inputtable images. The CNN here will essentially reduce the parameters involved and apply relevant filters (which can be seen as key features of an image) to the image in order to reduce the amount of processing necessary to classify it and to increase efficiency. 
 
 ### Even more neural network definition things
 
@@ -48,7 +50,7 @@ This is a graph of the training and validation accuracy over 18 epochs. By exami
 
 ![Matrix](https://user-images.githubusercontent.com/89939151/132448414-0a822c84-0d4a-4816-840a-425d73dfcf60.PNG)
 
-The preciseness of the ResNet18 model is also supported by its confusion matrix. Clearly visisble along the diagonal line are the dark blue squares that contain the majority of the numbers. This indicates that the model predicted a majority of the instruments correctly as the numbers should appear where the predicted and acutal instruments meet. As a total average, the ResNet 18 model correctly predicted the instument 68.04% of the time which is much higher than the basline model. The instrument with the highest accuracy was the flute with 85.18% and the intrument with the lowest accuracy was the violin with 59.82%. Taking a closer look at latter reveals that the violin was most commonly mistaken for an accoustic guitar (a total of 10 times). Convsersely, the acoistic guitar was also mostly mistaken for the violin (a total of 7 times). From this information, we can assume that the spectrograms of the two instruments were similar in shape which might have confused the CNN![CNN](https://user-images.githubusercontent.com/89939151/132453944-5736b8ae-87c9-454f-8ea7-8dbb5367c7fd.PNG)
+The preciseness of the ResNet18 model is also supported by its confusion matrix. Clearly visisble along the diagonal line are the dark blue squares that contain the majority of the numbers. This indicates that the model predicted a majority of the instruments correctly as the numbers should appear where the predicted and acutal instruments meet. As a total average, the ResNet 18 model correctly predicted the instument 68.04% of the time which is much higher than the basline model. The instrument with the highest accuracy was the flute with 85.18% and the intrument with the lowest accuracy was the violin with 59.82%. Taking a closer look at latter reveals that the violin was most commonly mistaken for an accoustic guitar (a total of 10 times). Convsersely, the acoistic guitar was also mostly mistaken for the violin (a total of 7 times). From this information, we can assume that the spectrograms of the two instruments were similar in shape which might have confused the CNN!
 .
 
 With diagram, no discussion
