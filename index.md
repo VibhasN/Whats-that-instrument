@@ -51,20 +51,30 @@ This is a graph of the training and validation accuracy over 18 epochs. By exami
 ![Matrix](https://user-images.githubusercontent.com/89939151/132448414-0a822c84-0d4a-4816-840a-425d73dfcf60.PNG)
 
 The preciseness of the ResNet18 model is also supported by its confusion matrix. Clearly visisble along the diagonal line are the dark blue squares that contain the majority of the numbers. This indicates that the model predicted a majority of the instruments correctly as the numbers should appear where the predicted and acutal instruments meet. As a total average, the ResNet 18 model correctly predicted the instument 68.04% of the time which is much higher than the basline model. The instrument with the highest accuracy was the flute with 85.18% and the intrument with the lowest accuracy was the violin with 59.82%. Taking a closer look at latter reveals that the violin was most commonly mistaken for an accoustic guitar (a total of 10 times). Convsersely, the acoistic guitar was also mostly mistaken for the violin (a total of 7 times). From this information, we can assume that the spectrograms of the two instruments were similar in shape which might have confused the CNN!
-.
 
-With diagram, no discussion
 
-Include examples
 
-### Discussion of results
+### Implications
 
-Discussion
+The model suggests that converting audio clips to visual spectrograms is an effective method to differentiate between sounds. This piece of information can have much more appropriate and useful applications in real life. For example, this tool can be used to identify and target different species of animals from their mating calls, which would be quite valuable in the environmental field. It could also be used to identify voices from an audio recording. Although unlikely, in the distant future, governments could potentially have a stored database of the voices of its citizens, similar to fingerprints, and use it to prosecute criminals using a similar, more advanced model.
 
 ### Future Work
 If we were to continue this project, we could expand from the IRMAS dataset to include other instruments and more audio files. For example, never mind auditorially, many fail to visually distinguish a euphonium from a tuba. There are many more than 11 instruments in a symphony orchestra that could be included.
 Also, our method of preprocessing could be changed. For example, the log transform served to emphasize patterns in lower frequencies, but this might not be necessary for a model to pick up on the patterns.
 
 ### Acknowledgements
+IRMAS dataset
+Juan J. Bosch, Ferdinand Fuhrmann, & Perfecto Herrera. (2014). IRMAS: a dataset for instrument recognition in musical audio signals (1.0) [Data set]. 13th International Society for Music Information Retrieval Conference (ISMIR 2012), Porto, Portugal. Zenodo. https://doi.org/10.5281/zenodo.1290750
+ResNet18 Diagram
+https://www.researchgate.net/figure/Original-ResNet-18-Architecture_fig1_336642248
+Other Convolutional Neural Network Diagrams
+https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53
+How to Create Basic Convolutional Neural Network
+https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-to-classify-photos-of-dogs-and-cats/
+Stack Overflow and Google Colaboratory
+PyTorch, Keras 
+Librosa
+McFee, Brian, Colin Raffel, Dawen Liang, Daniel PW Ellis, Matt McVicar, Eric Battenberg, and Oriol Nieto. “librosa: Audio and music signal analysis in python.” In Proceedings of the 14th python in science conference, pp. 18-25. 2015.
+Numpy, Sci-kit Learn, Matplotlib
+Professor Donald Smith
 
-Acknowledge dataset, Don, relevant python libraries, Colab
