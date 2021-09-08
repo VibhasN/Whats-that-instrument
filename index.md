@@ -49,6 +49,7 @@ Max pooling outputs the maximum value of a portion of the image covered by the f
 Describe
 
 ![Confusion Matrix 1](https://user-images.githubusercontent.com/89939151/132530832-3a73b26c-c709-4d11-9023-24958b1bddac.PNG)
+
 (cello, clarinet, flute, acoustic guitar, electric guitar, organ, piano, saxophone, trumpet, violin, and voice)
 
 Trumpet Spectrogram
