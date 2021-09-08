@@ -1,5 +1,4 @@
 # What’s that instrument?
-By Eric Wang, Bobby Bhandari, and Vibhas Nair
 ## Identifying Instruments
 
 Consider the following audio clip: [Guess the instrument!](/008__[cel][nod][cla]0058__1.wav)
@@ -82,9 +81,11 @@ This is a graph of the training and validation accuracy over 18 epochs. By exami
 The preciseness of the ResNet18 model is also supported by its confusion matrix. Clearly visible along the diagonal line are the dark blue squares that contain the majority of the numbers. This indicates that the model predicted a majority of the instruments correctly as the numbers should appear where the predicted and actual instruments meet. As a total average, the ResNet 18 model correctly predicted the instrument 68.04% of the time which is much higher than the baseline model. The instrument with the highest accuracy was the flute with 85.18% and the instrument with the lowest accuracy was the violin with 59.82%. Taking a closer look at the latter reveals that the violin was most commonly mistaken for an acoustic guitar (a total of 10 times). Conversely, the acoustic guitar was also mostly mistaken for the violin (a total of 7 times). From this information, we can assume that the spectrograms of the two instruments were similar in shape which might have confused the CNN!
 
 Violin Spectrogram
-![Similar violin spectrogram](/vio108.png)
+![violon spectorgram](https://user-images.githubusercontent.com/89939151/132545429-0dcb6486-8ce3-4fe4-9f6b-d9846a062b77.png)
+
 Voice Spectrogram
-![Similar voice spectrogram](/voi103.png)
+![Voice Spectrogram](https://user-images.githubusercontent.com/89939151/132545479-0e481f05-a3e6-44e1-87c0-31c9f02eb889.png)
+
 
 As shown above, the spectrograms do indeed have some major similarities. They both start out with thick blocks at the bottom that gradually become thin stripes near the top. Although the violin has shorter stripes than the voice, the placement and shape are similar enough to where the model might have been confused.
 
