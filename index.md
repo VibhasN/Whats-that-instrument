@@ -6,8 +6,8 @@ By: Eric Wang, Bobby Bhandari, and Vibhas Nair
 
 Consider the following audio clip: [Guess the instrument!](/008__[cel][nod][cla]0058__1.wav)
 What musical instrument are you listening to? 
-To those of you who recognized the instrument, awesome! But to those of you who thought to yourself, “ah, that’s a violin,” this deeply offends the groupmate who is a cellist; he’ll have you know that that was an audio clip of the cello. Not a “big violin;” a cello.
-Don’t you wish you had some sort of tool to distinguish between the different sounds of different instruments? Because to those of you who responded incorrectly, the cellist hopes you have a tool; this project is one such tool.
+To those of you who recognized the instrument, awesome! But to those of you who thought to yourself, “ah, that’s a violin,” this deeply offends the member of our group who is a cellist; he’ll have you know that that was an audio clip of the cello. Not a “big violin;” a cello.
+Don’t you wish you had some sort of tool to distinguish between the different sounds of different instruments? Because to those of you who thought the cello was a violin, the cellist hopes you have a tool; this project is one such tool.
 
 ## Overview
 
@@ -60,7 +60,7 @@ We trained our baseline model for around eighteen epochs, or iterations of the t
 
 (cello, clarinet, flute, acoustic guitar, electric guitar, organ, piano, saxophone, trumpet, violin, and voice in order of abbreviations)
 
-This is a confusion matrix of the baseline model that allows us to visualize which instruments the model had the most and least difficulty predicting. The Y-axis are the actual instruments and the X-axis are the model’s predictions. So a perfect model with 100% accuracy would have all the numbers lined up in a diagonal where the actual and predicted instruments meet, with every other box containing a 0. We can determine that the model did a poor job of predicting the instruments as there are a lot of large numbers that are outside of the diagonal; this is supported by its low accuracy of 40%. The instrument with the highest accuracy was the organ with 62.83%, while the lowest was the flute with 13.01%, with the violin coming in at a close second with 15.57%. It’s interesting that the model was able to differentiate the violin from a trumpet 100% of the time, but it wasn’t able to do the same with the trumpet; the model predicted the trumpet to be the violin 17 times. This could indicate that the spectrograms of the two instruments are somehow closely related.
+This is a confusion matrix of the baseline model that allows us to visualize which instruments the model had the most and least difficulty predicting. The Y-axis are the actual instruments and the X-axis are the model’s predictions. So a perfect model with 100% accuracy would have all the numbers lined up in a diagonal where the actual and predicted instruments meet, with every other box containing a 0. We can determine that the model did a poor job of predicting the instruments as there are a lot of large numbers that are outside of the diagonal; this is supported by its low accuracy of 40%. The instrument with the highest recall was the organ with 62.83%, while the lowest was the flute with 13.01%, with the violin coming in at a close second with 15.57%. It’s interesting that the model was able to differentiate the violin from a trumpet 100% of the time, but it wasn’t able to do the same with the trumpet; the model predicted the trumpet to be the violin 17 times. This could indicate that the spectrograms of the two instruments are somehow closely related.
 
 Trumpet Spectrogram
 
@@ -84,7 +84,9 @@ This is a graph of the training and validation accuracy over 18 epochs. By exami
 
 ![Matrix](https://user-images.githubusercontent.com/89939151/132448414-0a822c84-0d4a-4816-840a-425d73dfcf60.PNG)
 
-The preciseness of the ResNet18 model is also supported by its confusion matrix. Clearly visible along the diagonal line are the dark blue squares that contain the majority of the numbers. This indicates that the model predicted a majority of the instruments correctly as the numbers should appear where the predicted and actual instruments meet. As a total average, the ResNet 18 model correctly predicted the instrument 68.04% of the time which is much higher than the baseline model. The instrument with the highest accuracy was the flute with 85.18% and the instrument with the lowest accuracy was the violin with 59.82%. Taking a closer look at the latter reveals that the violin was most commonly mistaken for an acoustic guitar (a total of 10 times). Conversely, the acoustic guitar was also mostly mistaken for the violin (a total of 7 times). From this information, we can assume that the spectrograms of the two instruments were similar in shape which might have confused the CNN!
+The preciseness of the ResNet18 model is also supported by its confusion matrix. Clearly visible along the diagonal line are the dark blue squares that contain the majority of the numbers. This indicates that the model predicted a majority of the instruments correctly as the numbers should appear where the predicted and actual instruments meet. In contrast, the baseline confusion matrix had light squares in its diagonal since it had a lower accuracy. There were many instruments that were previously misidentified by the 6 layer model that the ResNet18 model identifies accurately. For example, the flute had a recall of 13.01%, being commonly confused with the acoustic guitar in the baseline model. However, in the ResNet18 model, it had a recall of 85.18%, improving significantly.
+
+The instrument with the highest recall was the flute with 85.18% and the instrument with the lowest was the violin with 59.82%. Taking a closer look at the latter reveals that the violin was most commonly mistaken for an acoustic guitar (a total of 10 times). Conversely, the acoustic guitar was also mostly mistaken for the violin (a total of 7 times). From this information, we can assume that the spectrograms of the two instruments were similar in shape which might have confused the CNN!
 
 Violin Spectrogram
 
