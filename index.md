@@ -48,6 +48,8 @@ This is a graph of the training and validation accuracy over 18 epochs. By exami
 
 ![Matrix](https://user-images.githubusercontent.com/89939151/132448414-0a822c84-0d4a-4816-840a-425d73dfcf60.PNG)
 
+The preciseness of the ResNet18 model is also supported by its confusion matrix. Clearly visisble along the diagonal line are the dark blue squares that contain the majority of the numbers. This indicates that the model predicted a majority of the instruments correctly as the numbers should appear where the predicted and acutal instruments meet. As a total average, the ResNet 18 model correctly predicted the instument 68.04% of the time which is much higher than the basline model. The instrument with the highest accuracy was the flute with 85.18% and the intrument with the lowest accuracy was the violin with 59.82%. Taking a closer look at the matrix reveals that the violin was most commonly mistaken for an accoustic guitar (a total of 10 times). Convsersely, the acoistic guitar was also mostly mistaken for the violin (a total of 7 times). From this information, we can assume that the spectrograms of the two instruments were similar in shape which might have confused the CNNN.
+
 With diagram, no discussion
 
 Include examples
