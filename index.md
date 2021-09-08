@@ -1,4 +1,5 @@
 # What’s that instrument?
+By Eric Wang, Bobby Bhandari, and Vibhas Nair
 ## Identifying Instruments
 
 Consider the following audio clip: [Guess the instrument!](/008__[cel][nod][cla]0058__1.wav)
