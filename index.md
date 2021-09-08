@@ -45,8 +45,10 @@ Describe
 ![Confusion Matrix 1](https://user-images.githubusercontent.com/89939151/132530832-3a73b26c-c709-4d11-9023-24958b1bddac.PNG)
 
 Trumpet Spectrogram
+
 ![tru116](https://user-images.githubusercontent.com/89653898/132536117-68f6e373-7115-41ca-90f9-3af6c1fc7cdc.PNG)
 Violin Spectrogram
+
 ![vio199](https://user-images.githubusercontent.com/89653898/132536253-a1b41f50-e7ad-4a9b-9cf3-6509bf7f2da7.PNG)
 
 #### ResNet18 Model
