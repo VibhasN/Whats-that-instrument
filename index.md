@@ -62,6 +62,8 @@ Violin Spectrogram
 
 ![vio199](https://user-images.githubusercontent.com/89653898/132536253-a1b41f50-e7ad-4a9b-9cf3-6509bf7f2da7.PNG)
 
+As seen in the confusion matrix, interestingly the model often confused the trumpet spectrograms as violin spectrograms, but not the other way around. The two spectrograms are shown above where there is a pattern of a large red bar on the bottom left of both of the images that began to thin out near the top. Perhaps this is why the model confused the trumpet for the violin. However, there is more space between the thin stripes in the violin spectrogram which may have allowed the model to differentiate the violin from the trumpet. 
+
 #### ResNet18 Model
 ![Original-ResNet-18](https://user-images.githubusercontent.com/89939151/132442868-598ad361-77bf-4ef8-b68c-192c2fab460f.png)
 
@@ -79,9 +81,6 @@ Violin Spectrogram
 ![Similar violin spectrogram](/vio108.png)
 Voice Spectrogram
 ![Similar voice spectrogram](/voi103.png)
-
-As seen in the confusion matrix, interestingly the model often confused the trumpet spectrograms as violin spectrograms, but not the other way around. The two spectrograms are shown above where there is a pattern of a large red bar on the bottom left of both of the images that began to thin out near the top. Perhaps this is why the model confused the trumpet for the violin. However, there is more space between the thin stripes in the violin spectrogram which may have allowed the model to differentiate the violin from the trumpet. 
-
 
 As shown above, the spectrograms do indeed have some major similarities. They both start out with thick blocks at the bottom that gradually become thin stripes near the top. Although the violin has shorter stripes than the voice, the placement and shape are similar enough to where the model might have been confused.
 
