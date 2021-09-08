@@ -55,6 +55,7 @@ The preciseness of the ResNet18 model is also supported by its confusion matrix.
 ![Similar violin spectrogram](/vio108.png)
 ![Similar voice spectrogram](/voi103.png)
 
+As shown above, the spectrograms do indeed have some major similarities. They both start out with thick blocks at the bottom that gradually become thin stripes near the top. Although the violin has shorter stripes than the voice, the placement and shape are similar enough to where the model might have been confused.
 
 ### Implications
 
