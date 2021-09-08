@@ -45,6 +45,7 @@ Afterwards, we used a ResNet18 Model which has 18 layers compared to the 6 layer
 
 ![Graph](https://user-images.githubusercontent.com/89939151/132444419-06370ff0-d23a-4062-8c07-9506b12692cf.PNG)
 
+This is a graph of the training and validation accuracy over 18 epochs. By examining the graph, we can see that the ResNet18 Model preformed much better than the baseline model. Both the training and validaiton accuracies remain above 60%, hovering around 70, and with a high accuracy, the cross-entrophy loss is low. In comparison, the highest validaiton accuracy from the baseline model was about 45%. Furthermore, the baseline model started to overfit around epoch 5 when the validation accuracy fell below the training accruacy, while the ResNet18 model overfitted after the 18 epochs as its validation accracuy gradully leveled off.
 With diagram, no discussion
 
 Include examples
